@@ -18,6 +18,13 @@ class GainsView: UIView {
         return label
     }()
 
+    let shortTermDeltaLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 15)
+        label.textColor = .gray
+        return label
+    }()
+
     let shortTermGainsLabel: UILabel = {
         let label = UILabel()
         label.text = "0"
@@ -30,6 +37,13 @@ class GainsView: UIView {
         label.text = "Short Term"
         label.textColor = .gray
         label.font = UIFont.systemFont(ofSize: 13)
+        return label
+    }()
+
+    let longTermDeltaLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 15)
+        label.textColor = .gray
         return label
     }()
 
@@ -60,9 +74,9 @@ class GainsView: UIView {
         layer.cornerRadius = 16
         layer.borderWidth = 0.5
         layer.borderColor = UIColor.lightGray.cgColor
-        let shortTermStackView = VStack(arrangedSubviews: [shortTermGainsLabel, shortTermLabel], spacing: 4)
+        let shortTermStackView = VStack(arrangedSubviews: [shortTermDeltaLabel, shortTermGainsLabel, shortTermLabel], spacing: 4)
         shortTermStackView.alignment = .center
-        let longTermStackView = VStack(arrangedSubviews: [longTermGainsLabel, longTermLabel], spacing: 4)
+        let longTermStackView = VStack(arrangedSubviews: [longTermDeltaLabel, longTermGainsLabel, longTermLabel], spacing: 4)
         longTermStackView.alignment = .center
         let gainsStack = UIStackView(arrangedSubviews: [shortTermStackView, separatorView, longTermStackView])
         gainsStack.distribution = .fillEqually
