@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  TaxTracker
 //
-//  Created by Nicholas Wong on 11/16/19.
+//  Created by Nicholas Wong on 11/17/19.
 //  Copyright © 2019 Nicholas Wong. All rights reserved.
 //
 
@@ -10,8 +10,6 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

@@ -3,27 +3,48 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		019B5C902381176F00C8456D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B5C8F2381176F00C8456D /* AppDelegate.swift */; };
 		019B5C922381176F00C8456D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B5C912381176F00C8456D /* SceneDelegate.swift */; };
-		019B5C942381176F00C8456D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B5C932381176F00C8456D /* ViewController.swift */; };
+		019B5C942381176F00C8456D /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B5C932381176F00C8456D /* MainController.swift */; };
 		019B5C972381176F00C8456D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 019B5C952381176F00C8456D /* Main.storyboard */; };
 		019B5C992381177000C8456D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 019B5C982381177000C8456D /* Assets.xcassets */; };
 		019B5C9C2381177000C8456D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 019B5C9A2381177000C8456D /* LaunchScreen.storyboard */; };
+		019B5CA52381184400C8456D /* Stevia in Frameworks */ = {isa = PBXBuildFile; productRef = 019B5CA42381184400C8456D /* Stevia */; };
+		019B5CA723811AB700C8456D /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B5CA623811AB700C8456D /* Transaction.swift */; };
+		019B5CA923811C7000C8456D /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B5CA823811C7000C8456D /* TransactionCell.swift */; };
+		019B5CAB23811D9400C8456D /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B5CAA23811D9400C8456D /* TransactionView.swift */; };
+		019B5CB0238125F500C8456D /* AddTransactionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B5CAF238125F500C8456D /* AddTransactionController.swift */; };
+		019B5CB22381262B00C8456D /* AddTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B5CB12381262B00C8456D /* AddTransactionView.swift */; };
+		019B5CB42381268200C8456D /* AddTransactionInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B5CB32381268200C8456D /* AddTransactionInputView.swift */; };
+		019B5CB72381360900C8456D /* TrackingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B5CB62381360900C8456D /* TrackingService.swift */; };
+		019B5CBE2381F6E800C8456D /* GainsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B5CBD2381F6E800C8456D /* GainsView.swift */; };
+		019B5CC0238203C600C8456D /* UIStackView+TaxTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B5CBF238203C600C8456D /* UIStackView+TaxTracker.swift */; };
+		019B5CC2238208C700C8456D /* Date+TaxTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019B5CC1238208C700C8456D /* Date+TaxTracker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		019B5C8C2381176F00C8456D /* TaxTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaxTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		019B5C8F2381176F00C8456D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		019B5C912381176F00C8456D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		019B5C932381176F00C8456D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		019B5C932381176F00C8456D /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		019B5C962381176F00C8456D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		019B5C982381177000C8456D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		019B5C9B2381177000C8456D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		019B5C9D2381177000C8456D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		019B5CA623811AB700C8456D /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		019B5CA823811C7000C8456D /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
+		019B5CAA23811D9400C8456D /* TransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionView.swift; sourceTree = "<group>"; };
+		019B5CAF238125F500C8456D /* AddTransactionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionController.swift; sourceTree = "<group>"; };
+		019B5CB12381262B00C8456D /* AddTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionView.swift; sourceTree = "<group>"; };
+		019B5CB32381268200C8456D /* AddTransactionInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionInputView.swift; sourceTree = "<group>"; };
+		019B5CB62381360900C8456D /* TrackingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingService.swift; sourceTree = "<group>"; };
+		019B5CBD2381F6E800C8456D /* GainsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GainsView.swift; sourceTree = "<group>"; };
+		019B5CBF238203C600C8456D /* UIStackView+TaxTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+TaxTracker.swift"; sourceTree = "<group>"; };
+		019B5CC1238208C700C8456D /* Date+TaxTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+TaxTracker.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				019B5CA52381184400C8456D /* Stevia in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +78,65 @@
 		019B5C8E2381176F00C8456D /* TaxTracker */ = {
 			isa = PBXGroup;
 			children = (
+				019B5CB82381C24700C8456D /* Extension */,
+				019B5CB5238135F700C8456D /* Service */,
+				019B5CAC2381239C00C8456D /* Model */,
+				019B5CAD238123AB00C8456D /* View */,
+				019B5CAE238123BB00C8456D /* Controller */,
 				019B5C8F2381176F00C8456D /* AppDelegate.swift */,
 				019B5C912381176F00C8456D /* SceneDelegate.swift */,
-				019B5C932381176F00C8456D /* ViewController.swift */,
 				019B5C952381176F00C8456D /* Main.storyboard */,
 				019B5C982381177000C8456D /* Assets.xcassets */,
 				019B5C9A2381177000C8456D /* LaunchScreen.storyboard */,
 				019B5C9D2381177000C8456D /* Info.plist */,
 			);
 			path = TaxTracker;
+			sourceTree = "<group>";
+		};
+		019B5CAC2381239C00C8456D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				019B5CA623811AB700C8456D /* Transaction.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		019B5CAD238123AB00C8456D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				019B5CA823811C7000C8456D /* TransactionCell.swift */,
+				019B5CAA23811D9400C8456D /* TransactionView.swift */,
+				019B5CB12381262B00C8456D /* AddTransactionView.swift */,
+				019B5CB32381268200C8456D /* AddTransactionInputView.swift */,
+				019B5CBD2381F6E800C8456D /* GainsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		019B5CAE238123BB00C8456D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				019B5C932381176F00C8456D /* MainController.swift */,
+				019B5CAF238125F500C8456D /* AddTransactionController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		019B5CB5238135F700C8456D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				019B5CB62381360900C8456D /* TrackingService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		019B5CB82381C24700C8456D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				019B5CBF238203C600C8456D /* UIStackView+TaxTracker.swift */,
+				019B5CC1238208C700C8456D /* Date+TaxTracker.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +155,9 @@
 			dependencies = (
 			);
 			name = TaxTracker;
+			packageProductDependencies = (
+				019B5CA42381184400C8456D /* Stevia */,
+			);
 			productName = TaxTracker;
 			productReference = 019B5C8C2381176F00C8456D /* TaxTracker.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +186,9 @@
 				Base,
 			);
 			mainGroup = 019B5C832381176F00C8456D;
+			packageReferences = (
+				019B5CA32381184400C8456D /* XCRemoteSwiftPackageReference "Stevia" */,
+			);
 			productRefGroup = 019B5C8D2381176F00C8456D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,9 +216,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				019B5C942381176F00C8456D /* ViewController.swift in Sources */,
+				019B5CB42381268200C8456D /* AddTransactionInputView.swift in Sources */,
+				019B5C942381176F00C8456D /* MainController.swift in Sources */,
 				019B5C902381176F00C8456D /* AppDelegate.swift in Sources */,
+				019B5CA723811AB700C8456D /* Transaction.swift in Sources */,
+				019B5CA923811C7000C8456D /* TransactionCell.swift in Sources */,
+				019B5CB0238125F500C8456D /* AddTransactionController.swift in Sources */,
+				019B5CB22381262B00C8456D /* AddTransactionView.swift in Sources */,
+				019B5CC2238208C700C8456D /* Date+TaxTracker.swift in Sources */,
+				019B5CB72381360900C8456D /* TrackingService.swift in Sources */,
 				019B5C922381176F00C8456D /* SceneDelegate.swift in Sources */,
+				019B5CAB23811D9400C8456D /* TransactionView.swift in Sources */,
+				019B5CBE2381F6E800C8456D /* GainsView.swift in Sources */,
+				019B5CC0238203C600C8456D /* UIStackView+TaxTracker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +424,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		019B5CA32381184400C8456D /* XCRemoteSwiftPackageReference "Stevia" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/freshOS/Stevia";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.7.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		019B5CA42381184400C8456D /* Stevia */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 019B5CA32381184400C8456D /* XCRemoteSwiftPackageReference "Stevia" */;
+			productName = Stevia;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 019B5C842381176F00C8456D /* Project object */;
 }
