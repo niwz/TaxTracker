@@ -14,7 +14,6 @@ protocol AddTransactionControllerDelegate: class {
 }
 
 class AddTransactionController: UIViewController {
-
     let addTransactionView = AddTransactionView()
     let saveButton: UIButton = {
         let btn = UIButton(type: .system)
@@ -36,7 +35,6 @@ class AddTransactionController: UIViewController {
         return dateFormatter
     }()
 
-
     override func viewDidLoad() {
         view.backgroundColor = .white
         view.sv(addTransactionView, saveButton)
@@ -49,7 +47,6 @@ class AddTransactionController: UIViewController {
     }
 
     private func setupDatePicker() {
-
         let datePicker = UIDatePicker()
         datePicker.datePickerMode = .date
         datePicker.addTarget(self, action: #selector(dateSelected(datePicker:)), for: .valueChanged)
@@ -71,8 +68,8 @@ class AddTransactionController: UIViewController {
     }
 
     @objc private func handleSave() {
-        let sent = TransactionUnit(currencyName: addTransactionView.sentCurrencyView.inputTextField.text ?? "", unitUSDValue: Int(addTransactionView.sentUnitValueView.inputTextField.text ?? "") ?? 0, quantity: Int(addTransactionView.sentQuantityView.inputTextField.text ?? "") ?? 0)
-        let received = TransactionUnit(currencyName: addTransactionView.receivedCurrencyView.inputTextField.text ?? "", unitUSDValue: Int(addTransactionView.receivedUnitValueView.inputTextField.text ?? "") ?? 0, quantity: Int(addTransactionView.receivedQuantityView.inputTextField.text ?? "") ?? 0)
+        let sent = TransactionUnit(currencyName: addTransactionView.sentCurrencyView.inputTextField.text ?? "", unitUSDValue: Int(addTransactionView.sentUnitValueView.inputTextField.text ?? "") ?? 0, quantity: Float(addTransactionView.sentQuantityView.inputTextField.text ?? "") ?? 0)
+        let received = TransactionUnit(currencyName: addTransactionView.receivedCurrencyView.inputTextField.text ?? "", unitUSDValue: Int(addTransactionView.receivedUnitValueView.inputTextField.text ?? "") ?? 0, quantity: Float(addTransactionView.receivedQuantityView.inputTextField.text ?? "") ?? 0)
         let transaction = Transaction(sent: sent, received: received, date: transactionDate)
         dismiss(animated: true) {
             TrackingService.shared.update(transaction)

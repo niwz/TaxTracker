@@ -10,7 +10,6 @@ import UIKit
 import Stevia
 
 class TransactionView: UIView {
-
     let currencyLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 17.0)

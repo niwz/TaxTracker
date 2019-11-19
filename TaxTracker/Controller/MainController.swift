@@ -10,40 +10,39 @@ import UIKit
 import Stevia
 
 class MainController: UIViewController {
-
     private let cellId = "cellId"
 
-    var shortTermProceeds: Int = 0 {
+    var shortTermProceeds: Float = 0 {
         didSet {
             gainsView.shortTermDeltaLabel.text = "\(shortTermProceeds) - \(shortTermCostBasis)"
         }
     }
 
-    var shortTermCostBasis: Int = 0 {
+    var shortTermCostBasis: Float = 0 {
         didSet {
             gainsView.shortTermDeltaLabel.text = "\(shortTermProceeds) - \(shortTermCostBasis)"
         }
     }
 
-    var shortTermCapitalGains: Int = 0 {
+    var shortTermCapitalGains: Float = 0 {
         didSet {
             gainsView.shortTermGainsLabel.text = "\(shortTermCapitalGains)"
         }
     }
 
-    var longTermProceeds: Int = 0 {
+    var longTermProceeds: Float = 0 {
         didSet {
             gainsView.longTermDeltaLabel.text = "\(longTermProceeds) - \(longTermCostBasis)"
         }
     }
 
-    var longTermCostBasis: Int = 0 {
+    var longTermCostBasis: Float = 0 {
         didSet {
             gainsView.longTermDeltaLabel.text = "\(longTermProceeds) - \(longTermCostBasis)"
         }
     }
 
-    var longTermCapitalGains: Int = 0 {
+    var longTermCapitalGains: Float = 0 {
         didSet {
             gainsView.longTermGainsLabel.text = "\(longTermCapitalGains)"
         }
@@ -51,9 +50,7 @@ class MainController: UIViewController {
 
     let gainsView = GainsView()
     let tableView = UITableView()
-
     var transactions = [Transaction]()
-
     let transactionsQueue: [String: [Transaction]] = [:]
 
     override func viewDidLoad() {
@@ -98,9 +95,9 @@ extension MainController: UITableViewDataSource {
 
     @objc private func handleAddShortTermCapitalGain(notification: Notification) {
         guard let userInfo = notification.userInfo else { return }
-        guard let proceeds = userInfo["proceeds"] as? Int else { return }
-        guard let basis = userInfo["basis"] as? Int else { return }
-        guard let gain = userInfo["gain"] as? Int else { return }
+        guard let proceeds = userInfo["proceeds"] as? Float else { return }
+        guard let basis = userInfo["basis"] as? Float else { return }
+        guard let gain = userInfo["gain"] as? Float else { return }
         shortTermProceeds += proceeds
         shortTermCostBasis += basis
         shortTermCapitalGains += gain
@@ -108,9 +105,9 @@ extension MainController: UITableViewDataSource {
 
     @objc private func handleAddLongTermCapitalGain(notification: Notification) {
         guard let userInfo = notification.userInfo else { return }
-        guard let proceeds = userInfo["proceeds"] as? Int else { return }
-        guard let basis = userInfo["basis"] as? Int else { return }
-        guard let gain = userInfo["gain"] as? Int else { return }
+        guard let proceeds = userInfo["proceeds"] as? Float else { return }
+        guard let basis = userInfo["basis"] as? Float else { return }
+        guard let gain = userInfo["gain"] as? Float else { return }
         longTermProceeds += proceeds
         longTermCostBasis += basis
         longTermCapitalGains += gain

@@ -9,7 +9,6 @@
 import UIKit
 
 class TransactionCell: UITableViewCell {
-
     var transaction: Transaction! {
         didSet {
             sentView.configure(transaction.sent)

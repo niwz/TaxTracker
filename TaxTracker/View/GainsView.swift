@@ -10,7 +10,6 @@ import UIKit
 import Stevia
 
 class GainsView: UIView {
-
     let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Capital Gains"
@@ -62,7 +61,6 @@ class GainsView: UIView {
         return label
     }()
 
-
     let separatorView: UIView = {
         let v = UIView()
         v.width(100)
@@ -79,7 +77,7 @@ class GainsView: UIView {
         let longTermStackView = VStack(arrangedSubviews: [longTermDeltaLabel, longTermGainsLabel, longTermLabel], spacing: 4)
         longTermStackView.alignment = .center
         let gainsStack = UIStackView(arrangedSubviews: [shortTermStackView, separatorView, longTermStackView])
-        gainsStack.distribution = .fillEqually
+        gainsStack.distribution = .fill
         let overallStackView = VStack(arrangedSubviews: [titleLabel, gainsStack], spacing: 16)
         overallStackView.alignment = .center
         sv(overallStackView)

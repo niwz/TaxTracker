@@ -14,11 +14,8 @@ extension NSNotification {
 }
 
 class TrackingService {
-    
     static let shared = TrackingService()
-
     typealias CurrencyQueueTuple = (transactionUnit: TransactionUnit, date: Date)
-
     var currencyQueues: [String: [CurrencyQueueTuple]] = [:]
 
     func update(_ transaction: Transaction) {
@@ -31,13 +28,13 @@ class TrackingService {
         let longTermThreshold: TimeInterval = 60 * 60 * 24 * 366
         guard var sentCurrencyQueue = currencyQueues[sentCurrency] else { return }
 
-        var shortTermProceeds = 0
-        var shortTermCostBasis = 0
-        var shortTermCapitalGains = 0
+        var shortTermProceeds: Float = 0.0
+        var shortTermCostBasis: Float = 0.0
+        var shortTermCapitalGains: Float = 0.0
 
-        var longTermProceeds = 0
-        var longTermCostBasis = 0
-        var longTermCapitalGains = 0
+        var longTermProceeds: Float = 0.0
+        var longTermCostBasis: Float = 0.0
+        var longTermCapitalGains: Float = 0.0
 
         var sentQuantity = sent.quantity
         while sentQuantity > 0 {
@@ -46,26 +43,26 @@ class TrackingService {
             let timeDelta = date - firstIn.date
             if firstIn.transactionUnit.quantity > sentQuantity {
                 if timeDelta < longTermThreshold {
-                    shortTermProceeds += sent.unitUSDValue * sentQuantity
-                    shortTermCostBasis += firstIn.transactionUnit.unitUSDValue * sentQuantity
-                    shortTermCapitalGains += sent.unitUSDValue * sentQuantity - firstIn.transactionUnit.unitUSDValue * sentQuantity
+                    shortTermProceeds += Float(sent.unitUSDValue) * sentQuantity
+                    shortTermCostBasis += Float(firstIn.transactionUnit.unitUSDValue) * sentQuantity
+                    shortTermCapitalGains += Float(sent.unitUSDValue) * sentQuantity - Float(firstIn.transactionUnit.unitUSDValue) * sentQuantity
                 } else {
-                    longTermProceeds += sent.unitUSDValue * sentQuantity
-                    longTermCostBasis += firstIn.transactionUnit.unitUSDValue * sentQuantity
-                    longTermCapitalGains += sent.unitUSDValue * sentQuantity - firstIn.transactionUnit.unitUSDValue * sentQuantity
+                    longTermProceeds += Float(sent.unitUSDValue) * sentQuantity
+                    longTermCostBasis += Float(firstIn.transactionUnit.unitUSDValue) * sentQuantity
+                    longTermCapitalGains += Float(sent.unitUSDValue) * sentQuantity - Float(firstIn.transactionUnit.unitUSDValue) * sentQuantity
                 }
                 firstIn.transactionUnit.quantity -= sentQuantity
                 sentCurrencyQueue[0] = firstIn
                 sentQuantity = 0
             } else {
                 if timeDelta < longTermThreshold {
-                    shortTermProceeds += sent.unitUSDValue *  firstIn.transactionUnit.quantity
-                    shortTermCostBasis += firstIn.transactionUnit.unitUSDValue * firstIn.transactionUnit.quantity
-                    shortTermCapitalGains += sent.unitUSDValue *  firstIn.transactionUnit.quantity - firstIn.transactionUnit.unitUSDValue * firstIn.transactionUnit.quantity
+                    shortTermProceeds += Float(sent.unitUSDValue) *  firstIn.transactionUnit.quantity
+                    shortTermCostBasis += Float(firstIn.transactionUnit.unitUSDValue) * firstIn.transactionUnit.quantity
+                    shortTermCapitalGains += Float(sent.unitUSDValue) *  firstIn.transactionUnit.quantity - Float(firstIn.transactionUnit.unitUSDValue) * firstIn.transactionUnit.quantity
                 } else {
-                    longTermProceeds += sent.unitUSDValue *  firstIn.transactionUnit.quantity
-                    longTermCostBasis += firstIn.transactionUnit.unitUSDValue * firstIn.transactionUnit.quantity
-                    longTermCapitalGains += sent.unitUSDValue *  firstIn.transactionUnit.quantity - firstIn.transactionUnit.unitUSDValue * firstIn.transactionUnit.quantity
+                    longTermProceeds += Float(sent.unitUSDValue) *  firstIn.transactionUnit.quantity
+                    longTermCostBasis += Float(firstIn.transactionUnit.unitUSDValue) * firstIn.transactionUnit.quantity
+                    longTermCapitalGains += Float(sent.unitUSDValue) *  firstIn.transactionUnit.quantity - Float(firstIn.transactionUnit.unitUSDValue) * firstIn.transactionUnit.quantity
                 }
                 sentCurrencyQueue.removeFirst()
                 sentQuantity -= firstIn.transactionUnit.quantity

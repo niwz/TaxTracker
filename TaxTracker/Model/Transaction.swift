@@ -17,5 +17,5 @@ struct Transaction: Codable {
 struct TransactionUnit: Codable {
     let currencyName: String
     let unitUSDValue: Int
-    var quantity: Int
+    var quantity: Float
 }

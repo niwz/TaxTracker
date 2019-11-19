@@ -10,7 +10,6 @@ import UIKit
 import Stevia
 
 class AddTransactionView: UIView {
-
     let sentCurrencyView = AddTransactionInputView(name: "Sent Currency")
     let sentUnitValueView = AddTransactionInputView(name: "Unit Value (USD)")
     let sentQuantityView = AddTransactionInputView(name: "Sent Quantity")
@@ -18,6 +17,7 @@ class AddTransactionView: UIView {
     let receivedCurrencyView = AddTransactionInputView(name: "Received Currency")
     let receivedUnitValueView = AddTransactionInputView(name: "Unit Value (USD)")
     let receivedQuantityView = AddTransactionInputView(name: "Received Quantity")
+    
     let dateView = AddTransactionInputView(name: "Date")
 
     override init(frame: CGRect) {

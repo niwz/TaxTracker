@@ -10,7 +10,6 @@ import UIKit
 import Stevia
 
 class AddTransactionInputView: UIView {
-
     let nameLabel: UILabel = {
         let label = UILabel()
         label.font = .boldSystemFont(ofSize: 17)
